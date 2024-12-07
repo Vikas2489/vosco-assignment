@@ -49,7 +49,7 @@ export async function GET(request) {
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (error) {
-    console.error('Error fetching data:', error.message);
+    console.error('Error fetching data:', error, error.message);
     return new Response(
       JSON.stringify({
         error: 'Failed to fetch data. Check the URL or selectors.',
